@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PULSAR | Combined Analysis</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detect.html">Detect</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__container" style="grid-template-columns: 1.2fr 0.8fr;">
+            <div class="content">
+                <h1 class="title">Full <span>Analysis</span></h1>
+                <p class="description">Upload an image and enter values for the best results.</p>
+                
+                <div class="card" style="margin-bottom: 2rem;">
+                    <div class="upload-container" id="uploadContainer" style="padding: 1.5rem;">
+                        <i class="ri-image-add-line" style="font-size: 2rem;"></i>
+                        <p>Upload Image</p>
+                        <input type="file" id="imageUpload" accept="image/*" style="display: none;" />
+                    </div>
+                </div>
+
+                <form id="numericalForm" class="card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;">
+                    <div class="form-group">
+                        <label>Mean (Integrated)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Std Dev (Integrated)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kurtosis (Integrated)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Skewness (Integrated)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mean (DM-SNR)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Std Dev (DM-SNR)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kurtosis (DM-SNR)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Skewness (DM-SNR)</label>
+                        <input type="number" step="any" required>
+                    </div>
+                    <div style="grid-column: 1 / -1; text-align: center; margin-top: 1rem;">
+                        <button type="button" class="btn btn-primary" id="submitButton">Analyze Data</button>
+                        <img id="loadingGif" src="assets/loading.gif" style="display: none; width: 25px; margin-left: 10px;">
+                    </div>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="./assets/pulsar.png" alt="Galaxy" style="border-radius: 20px;" />
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="result-section">
+        <div class="section__container">
+            <div id="output" style="width: 100%;">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 PULSAR DETECTION SYSTEM | DESIGNED AND DEVELOPED BY CHILUKUR VISHNU NANDAN</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="both.js"></script>
+</body>
+</html>

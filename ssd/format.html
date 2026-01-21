@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PULSAR | PHCX Analysis</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detect.html">Detect</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <h1 class="title">PHCX <span>Analysis</span></h1>
+                <p class="description">
+                    Upload a .phcx file for a full analysis. We will extract data and images to give you an accurate prediction.
+                </p>
+                <form id="uploadForm">
+                    <div class="upload-container" id="uploadContainer">
+                        <i class="ri-upload-cloud-2-line"></i>
+                        <p>Drop your .phcx file here</p>
+                        <input type="file" id="fileUpload" accept=".phcx" style="display: none;" />
+                    </div>
+                    <div id="errorMessage" style="color: #ff4d4d; margin-top: 1rem; display: none;">Please upload a valid .phcx file.</div>
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <button type="submit" class="btn btn-primary" id="uploadButton">Analyze File</button>
+                        <img id="loading" src="assets/loading.gif" alt="loading" style="display: none; width: 30px; margin-left: 10px; vertical-align: middle;">
+                    </div>
+                </form>
+            </div>
+            <div class="card" id="resultsCard" style="display: none;">
+                <h2 style="margin-bottom: 1rem;">Process Status</h2>
+                <p id="statusText">Waiting for file...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="result-section">
+        <div class="section__container">
+            <div id="output" class="result-grid">
+                <!-- Dynamic results will be injected here -->
+            </div>
+            <div id="output1" class="prediction-box" style="grid-column: 1 / -1; margin-top: 2rem;">
+                <!-- Final prediction message -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 PULSAR DETECTION SYSTEM | DESIGNED AND DEVELOPED BY CHILUKUR VISHNU NANDAN</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="format.js"></script>
+</body>
+</html>

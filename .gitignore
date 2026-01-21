@@ -1,0 +1,25 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.sqlite3
+ECHO is off.
+# ===== Virtual Environments =====
+venv/
+env/
+.venv/
+ECHO is off.
+# ===== Machine Learning / Large Files =====
+*.h5
+*.pt
+*.pth
+*.onnx
+*.dll
+*.so
+*.bin
+ECHO is off.
+# ===== OS Files =====
+Thumbs.db
+.DS_Store

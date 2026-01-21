@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PULSAR | Numerical Detection</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="detect.html">Detect</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="section__container">
+            <div class="content">
+                <h1 class="title">Value <span>Analysis</span></h1>
+                <p class="description">Enter the data values below to start analysis.</p>
+                <form id="pulsarForm" class="card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label>Mean (Integrated)</label>
+                        <input type="number" id="meanIntegrated" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Std Dev (Integrated)</label>
+                        <input type="number" id="stdIntegrated" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kurtosis (Integrated)</label>
+                        <input type="number" id="kurtIntegrated" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Skewness (Integrated)</label>
+                        <input type="number" id="skewIntegrated" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mean (DM-SNR)</label>
+                        <input type="number" id="meanDMSNR" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Std Dev (DM-SNR)</label>
+                        <input type="number" id="stdDMSNR" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Kurtosis (DM-SNR)</label>
+                        <input type="number" id="kurtDMSNR" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Skewness (DM-SNR)</label>
+                        <input type="number" id="skewDMSNR" step="any" required>
+                    </div>
+                    <div style="grid-column: 1 / -1; text-align: center; margin-top: 1rem;">
+                        <button type="submit" class="btn btn-primary">Analyze Data</button>
+                        <img id="loading" src="assets/loading.gif" style="display: none; width: 25px; margin-left: 10px;">
+                    </div>
+                </form>
+            </div>
+            <div class="image-container float-img">
+                <img src="assets/What_is_a_neutron_star.jpg" alt="Neutron Star" />
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="result-section">
+        <div class="section__container">
+            <div id="output" class="prediction-box" style="grid-column: 1 / -1;">
+                <!-- Results -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 PULSAR DETECTION SYSTEM | DESIGNED AND DEVELOPED BY CHILUKUR VISHNU NANDAN</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="num.js"></script>
+</body>
+</html>

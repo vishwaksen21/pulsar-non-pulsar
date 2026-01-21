@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #00d4ff;
+  --primary-color-dark: #008fb3;
+  --secondary-color: #0c111d;
+  --accent-color: #ff00d4;
+  --text-white: #ffffff;
+  --text-gray: #a5a5a5;
+  --bg-dark: #06070a;
+  --card-bg: #11141d;
+  --border-color: #2a2f3a;
+  --font-main: "Poppins", sans-serif;
+  --font-accent: "Orbitron", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(6, 7, 10, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1.2rem 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-gray);
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
+}
+
+/* Sections */
+.section {
+  padding: 5rem 0;
+}
+
+.section2 {
+  padding: 5rem 0;
+  background-color: var(--secondary-color);
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Content */
+.content .title {
+  font-size: 3.5rem;
+  font-family: var(--font-accent);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.content .title span {
+  color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), #80efff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content .description {
+  color: var(--text-gray);
+  margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  max-width: 600px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.8rem 2rem;
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-dark);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+}
+
+.action__btns {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Images */
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.float-img img {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+}
+
+.card h2, .card h3 {
+  font-family: var(--font-accent);
+  margin-bottom: 1rem;
+}
+
+.card h2 span {
+  color: var(--primary-color);
+}
+
+/* Form Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  font-family: var(--font-accent);
+}
+
+.form-group input {
+  padding: 0.7rem;
+  border-radius: 5px;
+  background: #1a1e2a;
+  border: 1px solid var(--border-color);
+  color: white;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+}
+
+/* Upload Container */
+.upload-container {
+  border: 2px dashed var(--border-color);
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-container:hover {
+  border-color: var(--primary-color);
+  background-color: rgba(0, 212, 255, 0.05);
+}
+
+.upload-container i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Results */
+.result-section {
+  display: none;
+  background-color: var(--secondary-color);
+  padding: 5rem 0;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.prediction-box {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.prediction-label {
+  font-size: 2rem;
+  font-family: var(--font-accent);
+}
+
+.prediction-label span {
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+
+.dragover {
+  border-color: var(--primary-color) !important;
+  background-color: rgba(0, 212, 255, 0.1) !important;
+}
+
+/* Footer */
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .section__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .action__btns {
+    justify-content: center;
+  }
+  
+  .content .title {
+    font-size: 2.2rem;
+  }
+  
+  nav ul {
+    gap: 1rem;
+  }
+}

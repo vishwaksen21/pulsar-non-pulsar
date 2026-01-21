@@ -1,0 +1,25 @@
+Pulsar Detection Core Files:
+
+Backend Models:
+- Backend/models/ann.onnx
+- Backend/models/cnn.onnx
+
+Backend Detection Scripts:
+- Backend/APIs/ANN_ONNX.py (Numerical data prediction)
+- Backend/APIs/CNN_ONNX.py (Image data prediction)
+- Backend/APIs/Merged_predict_script.py (Hybrid data prediction)
+- Backend/APIs/phcx_to_image.py (PHCX file processing)
+- Backend/APIs/views.py (API endpoints for detection)
+
+Backend Tools & Feature Extraction:
+- Backend/APIs/tool/FeatureExtractor.py
+- Backend/APIs/tool/PHCXFeatureExtractor.py
+- Backend/APIs/tool/PFDFeatureExtractor.py
+- Backend/APIs/tool/DataProcessor.py
+- Backend/APIs/tool/PulsarFeatureLab.py
+
+Frontend Detection Logic:
+- ssd/num.js (Numerical data handling)
+- ssd/img.js (Image data handling)
+- ssd/both.js (Hybrid data handling)
+- ssd/format.js (PHCX format handling)
